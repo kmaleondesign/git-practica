@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aedros</title>
+    <link href="css/anythingslider.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.easing.1.2.js"></script>
+    <script src="js/jquery.anythingslider.min.js"></script>
+    <script src="js/jquery.anythingslider.video.js"></script>
+    <script src="js/jquery.jplayer.min.js"></script>
+    <script>
+    $(function() {
+        $('#tvc-slider').anythingSlider({
+            buildStartStop: false,
+            hashTags:false
+        });
+        $('#tvc-slider').anythingSliderVideo();
+        $('#print-slider').anythingSlider({
+            buildStartStop: false,
+            expand: false,
+            resizeContents: false,
+            buildNavigation: false,
+            showMultiple: false,
+            hashTags:false
+        });
+        $('#backstage-slider').anythingSlider({
+            buildStartStop: false,
+            expand: false,
+            resizeContents: false,
+            buildNavigation: false,
+            showMultiple: false,
+            hashTags:false
+        });
+        $("#jquery_jplayer_1").jPlayer({
+            ready: function () {
+                $(this).jPlayer("setMedia", {
+                    mp3: "audio/abrigo.mp3",
+                    oga: "audio/abrigo.ogg"
+                });
+            },
+            play: function() { // To avoid multiple jPlayers playing together.
+                $(this).jPlayer("pauseOthers");
+            },
+            swfPath: "js",
+            supplied: "mp3, oga",
+            wmode: "window",
+            smoothPlayBar: true,
+            keyEnabled: true
+        }); 
+        $("#jquery_jplayer_2").jPlayer({
+            ready: function () {
+                $(this).jPlayer("setMedia", {
+                    mp3: "audio/colchon.mp3",
+                    oga: "audio/colchon.ogg"
+                 });
+            },
+            play: function() { // To avoid multiple jPlayers playing together.
+                $(this).jPlayer("pauseOthers");
+            },
+            swfPath: "js",
+            supplied: "mp3, oga",
+            cssSelectorAncestor: "#jp_container_2",
+            wmode: "window",
+            smoothPlayBar: true,
+            keyEnabled: true
+        });
+        $("#jquery_jplayer_3").jPlayer({
+            ready: function () {
+                $(this).jPlayer("setMedia", {
+                    mp3: "audio/cuaderno.mp3",
+                    oga: "audio/cuaderno.ogg"
+                });
+            },
+            play: function() { // To avoid multiple jPlayers playing together.
+            $(this).jPlayer("pauseOthers");
+            },
+            swfPath: "js",
+            supplied: "mp3, oga",
+            cssSelectorAncestor: "#jp_container_3",
+            wmode: "window",
+            smoothPlayBar: true,
+            keyEnabled: true
+            }); 
+        });
+    </script>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header id="header" class="bg-green">
+        <div class="wrapper padding">
+            <div id="logos">
+                <a id="logo-aedros" href="http://donarayuda.org" target="_blank">
+                    DONARAYUDA<span>.ORG</span>
+                </a>
+                <a id="logo-rapp" href="http://www.rappargentina.com.ar" target="_blank">
+                    <img src="img/logo-rapp.png" alt="Rapp">
+                </a>
+            </div>
+            <p id="intro">
+                ya se lanzó la campaña
+                <strong>DONAR AYUDA</strong>, realizada por la agencia para aedros y fundación noble. la misma busca concientizar acerca de la necesidad de donar dinero regularmente a una ong permitiendo así responder a las necesidades sociales de una forma más efectiva, sostenida y estructural.
+            </p>
+            <p id="invitation">te invitamos a recorrerla y por supuesto, a donar.</p>
+        </div>
+    </header>
+    <section id="tvc">
+        <div class="wrapper">
+            <h2>tvc’s</h2>
+            <p>Se pautaron en los principales canales de aire y cable durante 3 meses.</p>
+            <ul id="tvc-slider">
+                <li>
+                    <iframe width="958" height="539" src="http://www.youtube.com/embed/AZr_7p5hw4U" frameborder="0" allowfullscreen></iframe>
+                </li>
+                <li>
+                    <iframe width="958" height="539" src="http://www.youtube.com/embed/QuvEnc2GPng" frameborder="0" allowfullscreen></iframe>
+                </li>
+                <li>
+                    <iframe width="958" height="539" src="http://www.youtube.com/embed/4d9TpiXm8_g" frameborder="0" allowfullscreen></iframe>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="web-design" class="bg-yellow">
+        <div class="wrapper padding">
+            <h2>Diseño Web</h2>
+            <p>Se realizó un sitio de fácil navegación donde las personas podían conocer a todas las ONGs
+                <br>(que hoy son más de 500), elegir su causa y donar.</p>
+            <div id="web-design-screen">
+                <a href="http://donarayuda.org" target="_blank">
+                    <img src="img/web-design-01.png" alt="Web Design">
+                </a>
+            </div>
+            <a href="http://donarayuda.org" target="_blank">
+                <img src="img/web-design-02.png" alt="Ver sitio online">
+            </a>
+        </div>
+    </section>
+    <section id="social-net">
+        <div id="wrapper">
+            <h2>redes sociales</h2>
+            <p>A través de Facebook y Twitter se abrió un canal de diálogo inmediato con donantes e interesados en las causas.</p>
+            <div class="center">
+                <a class="social-net-link" id="social-net-fb" href="https://www.facebook.com/donarayuda1" target="_blank">
+                    <img src="img/social-net-fb.png" alt="DONAR AYUDA en Facebook">
+                    <span>/donarayuda</span>
+                </a>
+                <a class="social-net-link" id="social-net-tw" href="https://twitter.com/DonarAyuda" target="_blank">
+                    <img src="img/social-net-tw.png" alt="DONAR AYUDA en Twitter">
+                    <span>@donarayuda</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="print" class="bg-green">
+        <div class="wrapper">
+            <h2>Gráficas</h2>
+            <p>Se realizaron publicaciones en los principales medios gráficos de todo el país.</p>
+            <ul id="print-slider">
+                <li>
+                    <img src="img/print-01.jpg" alt="">
+                </li>
+                <li>
+                    <img src="img/print-02.jpg" alt="">
+                </li>
+                <li>
+                    <img src="img/print-03.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="radio" class="bg-yellow">
+        <div class="wrapper">
+            <h2>Radio</h2>
+            <p>Se transmitieron en las principales radios de todo el país.</p>
+            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+            <div id="jp_container_1" class="jp-audio">
+                <div class="jp-type-single">
+                    <div class="jp-gui jp-interface">
+                        <ul class="jp-controls">
+                            <li><a href="javascript:;" class="jp-play" tabindex="1">play</a>
+                            </li>
+                            <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a>
+                            </li>
+                            <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a>
+                            </li>
+                            <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a>
+                            </li>
+                        </ul>
+                        <div class="jp-progress">
+                            <div class="jp-seek-bar">
+                                <div class="jp-play-bar"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="jp-no-solution">
+                        <span>Update Required</span>
+                        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                    </div>
+                </div>
+            </div>
+            <div id="jquery_jplayer_2" class="jp-jplayer"></div>
+            <div id="jp_container_2" class="jp-audio">
+                <div class="jp-type-single">
+                    <div class="jp-gui jp-interface">
+                        <ul class="jp-controls">
+                            <li><a href="javascript:;" class="jp-play" tabindex="1">play</a>
+                            </li>
+                            <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a>
+                            </li>
+                            <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a>
+                            </li>
+                            <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a>
+                            </li>
+                        </ul>
+                        <div class="jp-progress">
+                            <div class="jp-seek-bar">
+                                <div class="jp-play-bar"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="jp-no-solution">
+                        <span>Update Required</span>
+                        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                    </div>
+                </div>
+            </div>
+            <div id="jquery_jplayer_3" class="jp-jplayer"></div>
+            <div id="jp_container_3" class="jp-audio">
+                <div class="jp-type-single">
+                    <div class="jp-gui jp-interface">
+                        <ul class="jp-controls">
+                            <li><a href="javascript:;" class="jp-play" tabindex="1">play</a>
+                            </li>
+                            <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a>
+                            </li>
+                            <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a>
+                            </li>
+                            <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a>
+                            </li>
+                        </ul>
+                        <div class="jp-progress">
+                            <div class="jp-seek-bar">
+                                <div class="jp-play-bar"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="jp-no-solution">
+                        <span>Update Required</span>
+                        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="backstage">
+        <div class="wrapper">
+            <h2>Backstage</h2>
+            <p>DISFRUTALO TANTO COMO NOSOTROS.</p>
+            <div class="center">
+                <div id="backstage-video">
+                    <iframe width="442" height="249" src="http://www.youtube.com/embed/VnrbgzwihVo" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <ul id="backstage-slider">
+                    <li><img src="img/backstage-01.jpg" alt="Backstage"></li>
+                    <li><img src="img/backstage-02.jpg" alt="Backstage"></li>
+                    <li><img src="img/backstage-03.jpg" alt="Backstage"></li>
+                    <li><img src="img/backstage-04.jpg" alt="Backstage"></li>
+                    <li><img src="img/backstage-05.jpg" alt="Backstage"></li>
+                    <li><img src="img/backstage-06.jpg" alt="Backstage"></li>
+                    <li><img src="img/backstage-07.jpg" alt="Backstage"></li>
+                    <li><img src="img/backstage-08.jpg" alt="Backstage"></li>
+                    <li><img src="img/backstage-09.jpg" alt="Backstage"></li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="kit" class="bg-green">
+        <div class="wrapper">
+            <h2>kit de prensa</h2>
+            <div id="kit-media">
+                <a href="kit/Kit_ONGs_v3.zip">
+                    <img src="img/kit-01.png" alt="Kit de Prensa">
+                </a>
+            </div>
+            <a href="kit/Kit_ONGs_v3.zip">
+                <img src="img/kit-02.png" alt="Kit de Prensa">
+            </a>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="wrapper padding">
+            <div id="footer-left">
+                <a href="http://www.rappargentina.com.ar" target="_blank" id="footer-rapp" class="footer-link"></a>
+                <a href="https://www.facebook.com/donarayuda1" target="_blank" id="footer-facebook" class="footer-link"></a>
+                <a href="https://twitter.com/DonarAyuda" target="_blank" id="footer-twitter" class="footer-link"></a>
+                <a href="mailto:" id="footer-email" class="footer-link"></a>
+            </div>
+            <div id="footer-right">
+                <a href="http://www.aedros.org" id="footer-aedros" class="footer-link" target="_blank"></a>
+                <a href="http://www.grupoclarin.com/institucional/fundacion-noble" id="footer-noble" class="footer-link" target="_blank"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
